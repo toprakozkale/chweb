@@ -167,20 +167,12 @@
                         </div>
 
                         <form id="contact-form" class="space-y-6">
-                            <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
-                                <div class="space-y-2">
-                                    <label
-                                        class="text-sm font-bold uppercase tracking-wider text-[#886368] dark:text-gray-400">Ad
-                                        Soyad</label>
-                                    <input type="text" id="name" placeholder="Adınız ve soyadınız" required
-                                        class="w-full rounded-2xl border-none bg-white dark:bg-white/5 p-4 text-[#181112] dark:text-white focus:ring-2 focus:ring-primary shadow-sm">
-                                </div>
-                                <div class="space-y-2">
-                                    <label
-                                        class="text-sm font-bold uppercase tracking-wider text-[#886368] dark:text-gray-400">Numaranız</label>
-                                    <input type="tel" id="phone" placeholder="05XX XXX XX XX" required
-                                        class="w-full rounded-2xl border-none bg-white dark:bg-white/5 p-4 text-[#181112] dark:text-white focus:ring-2 focus:ring-primary shadow-sm">
-                                </div>
+                            <div class="space-y-2">
+                                <label
+                                    class="text-sm font-bold uppercase tracking-wider text-[#886368] dark:text-gray-400">Ad
+                                    Soyad</label>
+                                <input type="text" id="name" placeholder="Adınız ve soyadınız" required
+                                    class="w-full rounded-2xl border-none bg-white dark:bg-white/5 p-4 text-[#181112] dark:text-white focus:ring-2 focus:ring-primary shadow-sm">
                             </div>
 
                             <div class="space-y-2">
@@ -256,12 +248,20 @@
 
         <footer class="mt-auto border-t border-white/10 py-12">
             <div class="mx-auto flex max-w-[1200px] flex-col items-center justify-between gap-8 px-6 lg:flex-row">
-                <p class="text-sm font-bold uppercase tracking-widest text-[#886368] dark:text-gray-400">© 2024 CAN HOCA
+                <p class="text-sm font-bold tracking-widest text-[#886368] dark:text-gray-400">©2026 Bu web
+                    sitesi bir Qoodly ürünüdür. Tüm hakları saklıdır
                 </p>
-                <div class="flex gap-8 text-sm font-bold uppercase tracking-widest text-[#886368] dark:text-gray-400">
-                    <a class="hover:text-primary transition-colors"
-                        href="https://www.instagram.com/canhoca0?igsh=bTJ2ZnFqenFoYjJz" target="_blank">Instagram</a>
-                    <a class="hover:text-primary transition-colors" href="#">LinkedIn</a>
+                <div class="flex items-center gap-2">
+                    <a class="flex items-center gap-2 hover:text-primary transition-colors"
+                        href="https://www.instagram.com/canhoca0?igsh=bTJ2ZnFqenFoYjJz" target="_blank"
+                        rel="noopener noreferrer me" aria-label="Can Hoca'yı Instagram'da takip edin"
+                        title="Can Hoca Instagram Profili">
+                        <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                        </svg>
+                        <span class="text-sm font-bold uppercase tracking-widest">Instagram</span>
+                    </a>
                 </div>
             </div>
         </footer>
@@ -280,11 +280,29 @@
     <script>
         // Calendar Logic
         const calendarGrid = document.getElementById('calendar-days');
+        const monthDisplay = document.getElementById('current-month');
         let selectedDay = null;
+        let currentDate = new Date();
+
+        const turkishMonths = [
+            'Ocak', 'Şubat', 'Mart', 'Nisan', 'Mayıs', 'Haziran',
+            'Temmuz', 'Ağustos', 'Eylül', 'Ekim', 'Kasım', 'Aralık'
+        ];
 
         const generateCalendar = () => {
-            const daysInMonth = 31;
-            const startDay = 1; // Correct for Oct 2024 (starts on Tuesday)
+            const year = currentDate.getFullYear();
+            const month = currentDate.getMonth();
+
+            // Update month display
+            monthDisplay.textContent = `${turkishMonths[month]} ${year}`;
+
+            // Get days in month
+            const daysInMonth = new Date(year, month + 1, 0).getDate();
+
+            // Get first day of month (0 = Sunday, 1 = Monday, etc.)
+            const firstDay = new Date(year, month, 1).getDay();
+            // Convert to Monday-based (0 = Monday, 6 = Sunday)
+            const startDay = firstDay === 0 ? 6 : firstDay - 1;
 
             calendarGrid.innerHTML = '';
 
@@ -293,12 +311,18 @@
                 calendarGrid.innerHTML += '<div></div>';
             }
 
+            // Get today's date
+            const today = new Date();
+            const isCurrentMonth = today.getMonth() === month && today.getFullYear() === year;
+            const todayDate = today.getDate();
+
             for (let d = 1; d <= daysInMonth; d++) {
                 const dayEl = document.createElement('div');
                 dayEl.className = 'calendar-day flex h-10 w-10 cursor-pointer items-center justify-center rounded-full text-sm font-bold transition-all hover:bg-primary/10';
                 dayEl.textContent = d;
 
-                if (d === 8) { // Default active
+                // Set today as default active if in current month
+                if (isCurrentMonth && d === todayDate) {
                     dayEl.classList.add('active');
                     selectedDay = d;
                 }
@@ -315,34 +339,32 @@
 
         generateCalendar();
 
-        // WhatsApp Submission
-        const sendToWhatsApp = (e) => {
+        // Email Submission
+        const sendToEmail = (e) => {
             if (e) e.preventDefault();
 
             const name = document.getElementById('name').value;
-            const phone = document.getElementById('phone').value;
             const branch = document.getElementById('branch').value;
             const message = document.getElementById('message').value;
 
-            if (!name || !phone || !branch) {
+            if (!name || !branch) {
                 alert('Lütfen gerekli alanları doldurun.');
                 return;
             }
 
             const month = document.getElementById('current-month').textContent;
 
-            const text = `*Yeni İletişim ve Randevu Talebi*\n\n` +
-                `*Ad Soyad:* ${name}\n` +
-                `*Numara:* ${phone}\n` +
-                `*Branş:* ${branch}\n` +
-                `*Mesaj:* ${message || 'Belirtilmedi'}\n\n` +
-                `*İstenen Randevu Tarihi:* ${selectedDay} ${month}`;
+            const subject = `Yeni İletişim ve Randevu Talebi - ${name}`;
+            const body = `Ad Soyad: ${name}\n` +
+                `Branş: ${branch}\n` +
+                `Mesaj: ${message || 'Belirtilmedi'}\n\n` +
+                `İstenen Randevu Tarihi: ${selectedDay} ${month}`;
 
-            const whatsappUrl = `https://wa.me/905458779222?text=${encodeURIComponent(text)}`;
-            window.open(whatsappUrl, '_blank');
+            const mailtoUrl = `mailto:mahmutcanozkale@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            window.location.href = mailtoUrl;
         };
 
-        document.getElementById('contact-form').onsubmit = sendToWhatsApp;
+        document.getElementById('contact-form').onsubmit = sendToEmail;
 
         // Mobile Menu Logic
         document.addEventListener('DOMContentLoaded', () => {
