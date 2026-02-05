@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html class="dark" lang="tr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+
+    <!-- Primary Meta Tags -->
+    <title>Galeri & Medya | Can Hoca - Antrenman Görüntüleri</title>
+    <meta name="title" content="Galeri & Medya | Can Hoca - Antrenman Görüntüleri" />
+    <meta name="description"
+        content="Can Hoca'nın antrenman görüntüleri, beslenme programları ve sporcuların başarı hikayelerini keşfedin. Profesyonel spor koçluğu galeri ve videolar." />
+    <meta name="keywords"
+        content="Can Hoca, antrenman görüntüleri, fitness galeri, spor koçu videoları, beslenme programları" />
+    <meta name="author" content="Can Hoca" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://canhoca.com/gallery.html" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://canhoca.com/gallery.html" />
+    <meta property="og:title" content="Galeri & Medya | Can Hoca - Antrenman Görüntüleri" />
+    <meta property="og:description"
+        content="Can Hoca'nın antrenman görüntüleri, beslenme programları ve sporcuların başarı hikayelerini keşfedin." />
+    <meta property="og:image" content="https://canhoca.com/assets/img/CHLOGO2.jpeg" />
+    <meta property="og:locale" content="tr_TR" />
+    <meta property="og:site_name" content="Can Hoca" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://canhoca.com/gallery.html" />
+    <meta property="twitter:title" content="Galeri & Medya | Can Hoca - Antrenman Görüntüleri" />
+    <meta property="twitter:description"
+        content="Can Hoca'nın antrenman görüntüleri, beslenme programları ve sporcuların başarı hikayelerini keşfedin." />
+    <meta property="twitter:image" content="https://canhoca.com/assets/img/CHLOGO2.jpeg" />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet" />
+
+    <!-- Material Symbols -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#e21836",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#1a0d0e",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Lexend', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 2rem;
+            aspect-ratio: 1;
+        }
+
+        .gallery-item img,
+        .gallery-item video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover img,
+        .gallery-item:hover video {
+            transform: scale(1.05);
+        }
+
+        .play-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(226, 24, 54, 0.9);
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .play-button:hover {
+            background: rgba(226, 24, 54, 1);
+            transform: translate(-50%, -50%) scale(1.1);
+        }
+
+        .filter-btn.active {
+            background: #e21836;
+            color: white;
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-[#181112] dark:text-white transition-colors duration-300">
+    <div class="relative flex min-h-screen flex-col overflow-x-hidden">
+        <!-- Header -->
+        <header
+            class="header-animate sticky top-0 z-50 w-full border-b border-white/10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md">
+            <div class="mx-auto flex max-w-[1200px] items-center justify-between px-6 py-4 lg:px-10">
+                <a href="index.html" class="flex items-center gap-3">
+                    <img src="assets/img/CHLOGO2.jpeg" alt="Can Hoca Logo" class="h-10 w-auto">
+                    <h2 class="text-xl font-black tracking-tighter uppercase dark:text-white">CAN HOCA</h2>
+                </a>
+                <nav class="hidden flex-1 justify-center gap-10 md:flex">
+                    <a class="text-sm font-bold uppercase tracking-widest hover:text-primary transition-colors"
+                        href="index.html">Ana Sayfa</a>
+                    <a class="text-sm font-bold uppercase tracking-widest hover:text-primary transition-colors"
+                        href="about.html">Hakkımda</a>
+                    <a class="text-sm font-bold uppercase tracking-widest hover:text-primary transition-colors"
+                        href="gallery.html">Galeri</a>
+                    <a class="text-sm font-bold uppercase tracking-widest hover:text-primary transition-colors"
+                        href="contact.html">İletişim</a>
+                </nav>
+                <div class="flex items-center gap-4">
+                    <a href="tel:05458779222"
+                        class="hidden items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-6 py-2.5 text-sm font-black tracking-wider text-primary transition-all hover:bg-primary hover:text-white md:flex">
+                        <span class="material-symbols-outlined !text-lg text-green-500">call</span>
+                        0545 877 92 22
+                    </a>
+                    <button class="p-2 rounded-full bg-black/5 dark:bg-white/10"
+                        onclick="document.documentElement.classList.toggle('dark')">
+                        <span class="material-symbols-outlined !text-xl">dark_mode</span>
+                    </button>
+                    <!-- Mobile Menu Button -->
+                    <button id="mobile-menu-btn" class="p-2 rounded-full bg-black/5 dark:bg-white/10 md:hidden z-50">
+                        <span class="material-symbols-outlined !text-xl">menu</span>
+                    </button>
+                </div>
+            </div>
+            <!-- Mobile Menu Drawer -->
+            <div id="mobile-menu" style="display: none;"
+                class="fixed inset-0 z-40 h-screen w-full bg-background-light dark:bg-background-dark/95 backdrop-blur-xl">
+                <div class="flex h-full flex-col items-center justify-center gap-8 p-10">
+                    <nav class="flex flex-col items-center gap-6">
+                        <a class="text-2xl font-black uppercase tracking-widest hover:text-primary transition-colors mobile-link"
+                            href="index.html">Ana Sayfa</a>
+                        <a class="text-2xl font-black uppercase tracking-widest hover:text-primary transition-colors mobile-link"
+                            href="about.html">Hakkımda</a>
+                        <a class="text-2xl font-black uppercase tracking-widest hover:text-primary transition-colors mobile-link"
+                            href="gallery.html">Galeri</a>
+                        <a class="text-2xl font-black uppercase tracking-widest hover:text-primary transition-colors mobile-link"
+                            href="contact.html">İletişim</a>
+                    </nav>
+                    <a href="tel:05458779222"
+                        class="flex min-w-[200px] items-center justify-center gap-2 rounded-full bg-primary px-8 py-4 text-base font-black uppercase tracking-wider text-white mobile-link">
+                        <span class="material-symbols-outlined !text-xl text-green-500">call</span>
+                        0545 877 92 22
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <main class="flex-1">
+            <!-- Gallery Header -->
+            <section class="py-16 bg-background-light dark:bg-background-dark">
+                <div class="mx-auto max-w-[1200px] px-6 lg:px-10">
+                    <h1 class="text-4xl font-black tracking-tight dark:text-white md:text-5xl mb-8">Galeri & Medya</h1>
+
+                    <!-- Filter Buttons -->
+                    <div class="flex flex-wrap gap-3 mb-12">
+                        <button
+                            class="filter-btn active px-6 py-2 rounded-full bg-primary text-white font-bold text-sm uppercase tracking-wider transition-all hover:bg-primary"
+                            data-filter="all">
+                            Tümü
+                        </button>
+                        <button
+                            class="filter-btn px-6 py-2 rounded-full bg-white dark:bg-[#1a0e10] text-[#181112] dark:text-white font-bold text-sm uppercase tracking-wider transition-all hover:bg-gray-100 dark:hover:bg-[#2a1e20]"
+                            data-filter="training">
+                            Antrenman
+                        </button>
+                        <button
+                            class="filter-btn px-6 py-2 rounded-full bg-white dark:bg-[#1a0e10] text-[#181112] dark:text-white font-bold text-sm uppercase tracking-wider transition-all hover:bg-gray-100 dark:hover:bg-[#2a1e20]"
+                            data-filter="nutrition">
+                            Beslenme
+                        </button>
+                        <button
+                            class="filter-btn px-6 py-2 rounded-full bg-white dark:bg-[#1a0e10] text-[#181112] dark:text-white font-bold text-sm uppercase tracking-wider transition-all hover:bg-gray-100 dark:hover:bg-[#2a1e20]"
+                            data-filter="videos">
+                            Videolar
+                        </button>
+                    </div>
+
+                    <!-- Gallery Grid -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="gallery-grid">
+                        <!-- Training Images -->
+                        <div class="gallery-item" data-category="training">
+                            <img src="assets/img/IMG_1962.jpg" alt="Antrenman">
+                        </div>
+
+                        <div class="gallery-item" data-category="training">
+                            <img src="assets/img/del.jpg" alt="Antrenman">
+                        </div>
+
+                        <div class="gallery-item" data-category="training">
+                            <img src="assets/img/one.jpg" alt="Antrenman">
+                        </div>
+
+                        <!-- Nutrition Image -->
+                        <div class="gallery-item" data-category="nutrition">
+                            <img src="assets/img/diet.png" alt="Beslenme">
+                        </div>
+
+                        <!-- Lifestyle Images -->
+                        <div class="gallery-item" data-category="lifestyle">
+                            <img src="assets/img/IMG_1959.jpg" alt="Yaşam Tarzı">
+                        </div>
+
+                        <div class="gallery-item" data-category="lifestyle">
+                            <img src="assets/img/IMG_1963.jpg" alt="Yaşam Tarzı">
+                        </div>
+
+                        <div class="gallery-item" data-category="lifestyle">
+                            <img src="assets/img/IMG_1965.PNG" alt="Yaşam Tarzı">
+                        </div>
+
+                        <!-- Videos -->
+                        <div class="gallery-item" data-category="videos">
+                            <video src="assets/img/onlinekoc.mp4#t=0.001" preload="metadata" muted></video>
+                            <div class="play-button" onclick="playVideo(this)">
+                                <span class="material-symbols-outlined !text-3xl text-white">play_arrow</span>
+                            </div>
+                        </div>
+
+                        <div class="gallery-item" data-category="videos">
+                            <video src="assets/img/ftof.mp4#t=0.001" preload="metadata" muted></video>
+                            <div class="play-button" onclick="playVideo(this)">
+                                <span class="material-symbols-outlined !text-3xl text-white">play_arrow</span>
+                            </div>
+                        </div>
+
+                        <div class="gallery-item" data-category="videos">
+                            <video src="assets/img/WhatsApp Video 2026-02-04 at 18.58.07 (1).mp4#t=0.001"
+                                preload="metadata" muted></video>
+                            <div class="play-button" onclick="playVideo(this)">
+                                <span class="material-symbols-outlined !text-3xl text-white">play_arrow</span>
+                            </div>
+                        </div>
+
+                        <div class="gallery-item" data-category="videos">
+                            <video src="assets/img/WhatsApp Video 2026-02-04 at 18.58.07.mp4#t=0.001" preload="metadata"
+                                muted></video>
+                            <div class="play-button" onclick="playVideo(this)">
+                                <span class="material-symbols-outlined !text-3xl text-white">play_arrow</span>
+                            </div>
+                        </div>
+
+                        <div class="gallery-item" data-category="videos">
+                            <video src="assets/img/WhatsApp Video 2026-02-04 at 18.58.13.mp4#t=0.001" preload="metadata"
+                                muted></video>
+                            <div class="play-button" onclick="playVideo(this)">
+                                <span class="material-symbols-outlined !text-3xl text-white">play_arrow</span>
+                            </div>
+                        </div>
+
+                        <div class="gallery-item" data-category="videos">
+                            <video src="assets/img/WhatsApp Video 2026-02-04 at 18.58.17.mp4#t=0.001" preload="metadata"
+                                muted></video>
+                            <div class="play-button" onclick="playVideo(this)">
+                                <span class="material-symbols-outlined !text-3xl text-white">play_arrow</span>
+                            </div>
+                        </div>
+
+                        <div class="gallery-item" data-category="videos">
+                            <video src="assets/img/WhatsApp Video 2026-02-04 at 18.58.29 (1).mp4#t=0.001"
+                                preload="metadata" muted></video>
+                            <div class="play-button" onclick="playVideo(this)">
+                                <span class="material-symbols-outlined !text-3xl text-white">play_arrow</span>
+                            </div>
+                        </div>
+
+                        <div class="gallery-item" data-category="videos">
+                            <video src="assets/img/WhatsApp Video 2026-02-04 at 18.58.29.mp4#t=0.001" preload="metadata"
+                                muted></video>
+                            <div class="play-button" onclick="playVideo(this)">
+                                <span class="material-symbols-outlined !text-3xl text-white">play_arrow</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-white dark:bg-[#110809] border-t border-black/5 dark:border-white/5 py-12">
+            <div class="mx-auto max-w-[1200px] px-6 lg:px-10">
+                <div class="flex flex-col items-center justify-between gap-8 md:flex-row">
+                    <div class="flex items-center gap-3">
+                        <img src="assets/img/CHLOGO2.jpeg" alt="Can Hoca Footer Logo" class="h-8 w-auto">
+                        <span class="text-lg font-black tracking-tighter uppercase dark:text-white">CAN HOCA</span>
+                    </div>
+                    <div
+                        class="flex gap-8 text-sm font-bold uppercase tracking-widest text-[#886368] dark:text-gray-400">
+                        <a class="hover:text-primary transition-colors"
+                            href="https://www.instagram.com/canhoca0?igsh=bTJ2ZnFqenFoYjJz"
+                            target="_blank">Instagram</a>
+                        <a class="hover:text-primary transition-colors" href="#">LinkedIn</a>
+                    </div>
+                    <p class="text-xs font-medium text-[#886368] dark:text-gray-500 uppercase tracking-widest">
+                        © 2024 CAN HOCA. TÜM HAKLARI SAKLIDIR.
+                    </p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/905458779222" target="_blank"
+        class="fixed bottom-6 right-6 z-[60] flex h-16 w-16 items-center justify-center rounded-full bg-[#25D366] text-white shadow-2xl transition-all hover:scale-110 active:scale-95 group">
+        <svg class="h-8 w-8 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z" />
+        </svg>
+        <span class="absolute -top-1 -right-1 flex h-4 w-4">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-4 w-4 bg-white/20"></span>
+        </span>
+    </a>
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        window.addEventListener('load', () => {
+            // Header animation
+            gsap.from(".header-animate", {
+                y: -100,
+                opacity: 0,
+                duration: 1.2,
+                ease: "power4.out"
+            });
+
+            // Gallery items animation
+            gsap.from(".gallery-item", {
+                scrollTrigger: {
+                    trigger: ".gallery-item",
+                    start: "top 85%",
+                },
+                opacity: 0,
+                scale: 0.9,
+                duration: 0.8,
+                stagger: 0.1,
+                ease: "power3.out"
+            });
+        });
+
+        // Mobile Menu Logic
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuIcon = menuBtn ? menuBtn.querySelector('span') : null;
+            let isMenuOpen = false;
+
+            if (menuBtn && mobileMenu) {
+                gsap.set(mobileMenu, { yPercent: -100, display: "none" });
+
+                const toggleMenu = () => {
+                    isMenuOpen = !isMenuOpen;
+                    if (isMenuOpen) {
+                        mobileMenu.style.display = "block";
+                        gsap.to(mobileMenu, { yPercent: 0, duration: 0.6, ease: "power3.out" });
+                        gsap.fromTo(".mobile-link", { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.4, stagger: 0.08, delay: 0.2 });
+                        if (menuIcon) menuIcon.textContent = "close";
+                        document.body.style.overflow = "hidden";
+                    } else {
+                        gsap.to(mobileMenu, { yPercent: -100, duration: 0.5, ease: "power3.in", onComplete: () => { mobileMenu.style.display = "none"; } });
+                        if (menuIcon) menuIcon.textContent = "menu";
+                        document.body.style.overflow = "";
+                    }
+                };
+                menuBtn.onclick = toggleMenu;
+                const mobileLinks = mobileMenu.querySelectorAll('a');
+                mobileLinks.forEach(link => { link.onclick = () => { if (isMenuOpen) toggleMenu(); }; });
+            }
+        });
+
+        // Filter functionality
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const galleryItems = document.querySelectorAll('.gallery-item');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const filter = button.getAttribute('data-filter');
+
+                // Update active button
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+
+                // Filter gallery items
+                galleryItems.forEach(item => {
+                    const category = item.getAttribute('data-category');
+
+                    if (filter === 'all' || category === filter) {
+                        gsap.to(item, { opacity: 1, scale: 1, display: 'block', duration: 0.5 });
+                    } else {
+                        gsap.to(item, {
+                            opacity: 0, scale: 0.9, duration: 0.3, onComplete: () => {
+                                item.style.display = 'none';
+                            }
+                        });
+                    }
+                });
+            });
+        });
+
+        // Video play functionality
+        function playVideo(button) {
+            const galleryItem = button.parentElement;
+            const video = galleryItem.querySelector('video');
+
+            if (video.paused) {
+                video.play();
+                video.setAttribute('controls', 'controls');
+                button.style.display = 'none';
+
+                video.addEventListener('pause', () => {
+                    button.style.display = 'flex';
+                    video.removeAttribute('controls');
+                });
+
+                video.addEventListener('ended', () => {
+                    button.style.display = 'flex';
+                    video.removeAttribute('controls');
+                });
+            }
+        }
+    </script>
+</body>
+
+</html>

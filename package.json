@@ -1,0 +1,24 @@
+{
+    "name": "canhoca-website",
+    "version": "1.0.0",
+    "description": "Can Hoca - Elite Athletic Coaching Website",
+    "scripts": {
+        "minify:css": "echo 'CSS is inline in HTML files - no separate minification needed'",
+        "minify:js": "npx terser main.js -o main.min.js -c -m",
+        "minify": "npm run minify:js",
+        "serve": "python3 -m http.server 8080",
+        "deploy:vercel": "vercel --prod",
+        "deploy:netlify": "netlify deploy --prod"
+    },
+    "devDependencies": {
+        "terser": "^5.16.0"
+    },
+    "keywords": [
+        "sports-coaching",
+        "fitness",
+        "personal-trainer",
+        "performance-consulting"
+    ],
+    "author": "Can Hoca",
+    "license": "MIT"
+}

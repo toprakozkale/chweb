@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html class="dark" lang="tr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+
+    <!-- Primary Meta Tags -->
+    <title>İletişim & Randevu | Can Hoca - Spor Koçluğu</title>
+    <meta name="title" content="İletişim & Randevu | Can Hoca - Spor Koçluğu" />
+    <meta name="description"
+        content="Can Hoca ile iletişime geçin. Profesyonel spor koçluğu ve performans danışmanlığı için randevu alın. WhatsApp: 0545 877 92 22" />
+    <meta name="keywords"
+        content="Can Hoca iletişim, spor koçu randevu, personal trainer randevu, fitness koçu iletişim" />
+    <meta name="author" content="Can Hoca" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://canhoca.com/contact.html" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://canhoca.com/contact.html" />
+    <meta property="og:title" content="İletişim & Randevu | Can Hoca - Spor Koçluğu" />
+    <meta property="og:description"
+        content="Can Hoca ile iletişime geçin. Profesyonel spor koçluğu ve performans danışmanlığı için randevu alın." />
+    <meta property="og:image" content="https://canhoca.com/assets/img/CHLOGO2.jpeg" />
+    <meta property="og:locale" content="tr_TR" />
+    <meta property="og:site_name" content="Can Hoca" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://canhoca.com/contact.html" />
+    <meta property="twitter:title" content="İletişim & Randevu | Can Hoca - Spor Koçluğu" />
+    <meta property="twitter:description"
+        content="Can Hoca ile iletişime geçin. Profesyonel spor koçluğu ve performans danışmanlığı için randevu alın." />
+    <meta property="twitter:image" content="https://canhoca.com/assets/img/CHLOGO2.jpeg" />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet" />
+
+    <!-- Material Symbols -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#e21836",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#1a0d0e",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Lexend', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .calendar-day.active {
+            background-color: #e21836;
+            color: white;
+        }
+
+        .time-slot.active {
+            border-color: #e21836;
+            color: #e21836;
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-[#181112] dark:text-white transition-colors duration-300">
+    <div class="relative flex min-h-screen flex-col overflow-x-hidden">
+        <!-- Header -->
+        <header
+            class="header-animate sticky top-0 z-50 w-full border-b border-white/10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md">
+            <div class="mx-auto flex max-w-[1200px] items-center justify-between px-6 py-4 lg:px-10">
+                <a href="index.html" class="flex items-center gap-3">
+                    <img src="assets/img/CHLOGO2.jpeg" alt="Can Hoca Logo" class="h-10 w-auto">
+                    <h2 class="text-xl font-black tracking-tighter uppercase dark:text-white">CAN HOCA</h2>
+                </a>
+                <nav class="hidden flex-1 justify-center gap-10 md:flex">
+                    <a class="text-sm font-bold uppercase tracking-widest hover:text-primary transition-colors"
+                        href="index.html">Ana Sayfa</a>
+                    <a class="text-sm font-bold uppercase tracking-widest hover:text-primary transition-colors"
+                        href="about.html">Hakkımda</a>
+                    <a class="text-sm font-bold uppercase tracking-widest hover:text-primary transition-colors"
+                        href="gallery.html">Galeri</a>
+                    <a class="text-sm font-bold uppercase tracking-widest hover:text-primary transition-colors"
+                        href="contact.html">İletişim</a>
+                </nav>
+                <div class="flex items-center gap-4">
+                    <a href="tel:05458779222"
+                        class="hidden items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-6 py-2.5 text-sm font-black tracking-wider text-primary transition-all hover:bg-primary hover:text-white md:flex">
+                        <span class="material-symbols-outlined !text-lg text-green-500">call</span>
+                        0545 877 92 22
+                    </a>
+                    <button class="p-2 rounded-full bg-black/5 dark:bg-white/10"
+                        onclick="document.documentElement.classList.toggle('dark')">
+                        <span class="material-symbols-outlined !text-xl">dark_mode</span>
+                    </button>
+                    <!-- Mobile Menu Button -->
+                    <button id="mobile-menu-btn" class="p-2 rounded-full bg-black/5 dark:bg-white/10 md:hidden z-50">
+                        <span class="material-symbols-outlined !text-xl">menu</span>
+                    </button>
+                </div>
+            </div>
+            <!-- Mobile Menu Drawer -->
+            <div id="mobile-menu" style="display: none;"
+                class="fixed inset-0 z-40 h-screen w-full bg-background-light dark:bg-background-dark/95 backdrop-blur-xl">
+                <div class="flex h-full flex-col items-center justify-center gap-8 p-10">
+                    <nav class="flex flex-col items-center gap-6">
+                        <a class="text-2xl font-black uppercase tracking-widest hover:text-primary transition-colors mobile-link"
+                            href="index.html">Ana Sayfa</a>
+                        <a class="text-2xl font-black uppercase tracking-widest hover:text-primary transition-colors mobile-link"
+                            href="about.html">Hakkımda</a>
+                        <a class="text-2xl font-black uppercase tracking-widest hover:text-primary transition-colors mobile-link"
+                            href="gallery.html">Galeri</a>
+                        <a class="text-2xl font-black uppercase tracking-widest hover:text-primary transition-colors mobile-link"
+                            href="contact.html">İletişim</a>
+                    </nav>
+                    <a href="tel:05458779222"
+                        class="flex min-w-[200px] items-center justify-center gap-2 rounded-full bg-primary px-8 py-4 text-base font-black uppercase tracking-wider text-white mobile-link">
+                        <span class="material-symbols-outlined !text-xl text-green-500">call</span>
+                        0545 877 92 22
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <main class="flex-1 py-16 lg:py-24">
+            <div class="mx-auto max-w-[1200px] px-6 lg:px-10">
+                <div class="mb-16">
+                    <span class="text-xs font-black uppercase tracking-[0.2em] text-primary">PERFORMANSINIZI
+                        YÜKSELTİN</span>
+                    <h1 class="mt-4 text-5xl font-black tracking-tight md:text-6xl lg:text-7xl">Can ile Çalışın</h1>
+                    <p class="mt-6 max-w-2xl text-lg text-[#886368] dark:text-gray-400">
+                        İster bir atlet olun ister yükselen bir marka; gelin yüksek performanslı başarınıza giden
+                        yolu birlikte inşa edelim.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 gap-12 lg:grid-cols-2">
+                    <!-- Contact Form -->
+                    <div class="space-y-10">
+                        <div class="flex items-center gap-4">
+                            <span class="text-4xl font-black text-black/10 dark:text-white/10">01</span>
+                            <h2 class="text-2xl font-black uppercase tracking-tight">İLETİŞİME GEÇİN</h2>
+                        </div>
+
+                        <form id="contact-form" class="space-y-6">
+                            <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
+                                <div class="space-y-2">
+                                    <label
+                                        class="text-sm font-bold uppercase tracking-wider text-[#886368] dark:text-gray-400">Ad
+                                        Soyad</label>
+                                    <input type="text" id="name" placeholder="Adınız ve soyadınız" required
+                                        class="w-full rounded-2xl border-none bg-white dark:bg-white/5 p-4 text-[#181112] dark:text-white focus:ring-2 focus:ring-primary shadow-sm">
+                                </div>
+                                <div class="space-y-2">
+                                    <label
+                                        class="text-sm font-bold uppercase tracking-wider text-[#886368] dark:text-gray-400">Numaranız</label>
+                                    <input type="tel" id="phone" placeholder="05XX XXX XX XX" required
+                                        class="w-full rounded-2xl border-none bg-white dark:bg-white/5 p-4 text-[#181112] dark:text-white focus:ring-2 focus:ring-primary shadow-sm">
+                                </div>
+                            </div>
+
+                            <div class="space-y-2">
+                                <label
+                                    class="text-sm font-bold uppercase tracking-wider text-[#886368] dark:text-gray-400">Çalışmak
+                                    İstediğiniz Branşı Seçin</label>
+                                <select id="branch" required
+                                    class="w-full rounded-2xl border-none bg-white dark:bg-white/5 p-4 text-[#181112] dark:text-white focus:ring-2 focus:ring-primary shadow-sm appearance-none">
+                                    <option value="" disabled selected>Branş Seçiniz</option>
+                                    <option value="Online Koçluk">Online Koçluk</option>
+                                    <option value="Birebir Özel Ders">Birebir Özel Ders</option>
+                                    <option value="Beslenme Planlaması">Beslenme Planlaması</option>
+                                    <option value="Kurumsal Eğitimler">Kurumsal Eğitimler</option>
+                                </select>
+                            </div>
+
+                            <div class="space-y-2">
+                                <label
+                                    class="text-sm font-bold uppercase tracking-wider text-[#886368] dark:text-gray-400">Mesajınız</label>
+                                <textarea id="message" rows="5" placeholder="Hedeflerinizden bahsedin..."
+                                    class="w-full rounded-2xl border-none bg-white dark:bg-white/5 p-4 text-[#181112] dark:text-white focus:ring-2 focus:ring-primary shadow-sm resize-none"></textarea>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Appointment Section -->
+                    <div
+                        class="rounded-[3rem] bg-white dark:bg-[#1a0e10] p-8 lg:p-12 shadow-sm border border-black/5 dark:border-white/5">
+                        <div class="flex items-center gap-4 mb-8">
+                            <span class="text-4xl font-black text-black/10 dark:text-white/10">02</span>
+                            <h2 class="text-2xl font-black uppercase tracking-tight">RANDEVU ALIN</h2>
+                        </div>
+                        <p class="mb-8 text-[#886368] dark:text-gray-400">
+                            Birlikte nasıl çalışabileceğimizi görüşmek için 15 dakikalık bir Tanışma Toplantısı
+                            planlayın.
+                        </p>
+
+                        <!-- Calendar UI (Simplified for Demo) -->
+                        <div class="rounded-3xl border border-black/5 dark:border-white/5 p-6 mb-8 overflow-hidden">
+                            <div class="flex items-center justify-between mb-6">
+                                <span class="font-black uppercase tracking-wider" id="current-month">Ekim 2024</span>
+                                <div class="flex gap-4">
+                                    <span
+                                        class="material-symbols-outlined cursor-pointer hover:text-primary">chevron_left</span>
+                                    <span
+                                        class="material-symbols-outlined cursor-pointer hover:text-primary">chevron_right</span>
+                                </div>
+                            </div>
+                            <div
+                                class="grid grid-cols-7 gap-2 text-center text-[10px] font-black uppercase tracking-tighter text-[#886368] mb-4">
+                                <div>Pt</div>
+                                <div>Sa</div>
+                                <div>Çar</div>
+                                <div>Per</div>
+                                <div>Cu</div>
+                                <div>Cts</div>
+                                <div>Pz</div>
+                            </div>
+                            <div class="grid grid-cols-7 gap-2 text-center" id="calendar-days">
+                                <!-- Calendar days will be generated here -->
+                            </div>
+                        </div>
+
+                        <button type="submit" form="contact-form"
+                            class="flex h-14 w-full items-center justify-center gap-2 rounded-full bg-primary text-base font-black uppercase tracking-widest text-white transition-all hover:scale-105 active:scale-95 w-full">
+                            Gönder
+                            <span class="material-symbols-outlined">send</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="mt-auto border-t border-white/10 py-12">
+            <div class="mx-auto flex max-w-[1200px] flex-col items-center justify-between gap-8 px-6 lg:flex-row">
+                <p class="text-sm font-bold uppercase tracking-widest text-[#886368] dark:text-gray-400">© 2024 CAN HOCA
+                </p>
+                <div class="flex gap-8 text-sm font-bold uppercase tracking-widest text-[#886368] dark:text-gray-400">
+                    <a class="hover:text-primary transition-colors"
+                        href="https://www.instagram.com/canhoca0?igsh=bTJ2ZnFqenFoYjJz" target="_blank">Instagram</a>
+                    <a class="hover:text-primary transition-colors" href="#">LinkedIn</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/905458779222" target="_blank"
+        class="fixed bottom-6 right-6 z-[60] flex h-16 w-16 items-center justify-center rounded-full bg-[#25D366] text-white shadow-2xl transition-all hover:scale-110 active:scale-95 group">
+        <svg class="h-8 w-8 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z" />
+        </svg>
+    </a>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script>
+        // Calendar Logic
+        const calendarGrid = document.getElementById('calendar-days');
+        let selectedDay = null;
+
+        const generateCalendar = () => {
+            const daysInMonth = 31;
+            const startDay = 1; // Correct for Oct 2024 (starts on Tuesday)
+
+            calendarGrid.innerHTML = '';
+
+            // Empty spaces
+            for (let i = 0; i < startDay; i++) {
+                calendarGrid.innerHTML += '<div></div>';
+            }
+
+            for (let d = 1; d <= daysInMonth; d++) {
+                const dayEl = document.createElement('div');
+                dayEl.className = 'calendar-day flex h-10 w-10 cursor-pointer items-center justify-center rounded-full text-sm font-bold transition-all hover:bg-primary/10';
+                dayEl.textContent = d;
+
+                if (d === 8) { // Default active
+                    dayEl.classList.add('active');
+                    selectedDay = d;
+                }
+
+                dayEl.onclick = () => {
+                    document.querySelectorAll('.calendar-day').forEach(el => el.classList.remove('active'));
+                    dayEl.classList.add('active');
+                    selectedDay = d;
+                };
+
+                calendarGrid.appendChild(dayEl);
+            }
+        };
+
+        generateCalendar();
+
+        // WhatsApp Submission
+        const sendToWhatsApp = (e) => {
+            if (e) e.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const branch = document.getElementById('branch').value;
+            const message = document.getElementById('message').value;
+
+            if (!name || !phone || !branch) {
+                alert('Lütfen gerekli alanları doldurun.');
+                return;
+            }
+
+            const month = document.getElementById('current-month').textContent;
+
+            const text = `*Yeni İletişim ve Randevu Talebi*\n\n` +
+                `*Ad Soyad:* ${name}\n` +
+                `*Numara:* ${phone}\n` +
+                `*Branş:* ${branch}\n` +
+                `*Mesaj:* ${message || 'Belirtilmedi'}\n\n` +
+                `*İstenen Randevu Tarihi:* ${selectedDay} ${month}`;
+
+            const whatsappUrl = `https://wa.me/905458779222?text=${encodeURIComponent(text)}`;
+            window.open(whatsappUrl, '_blank');
+        };
+
+        document.getElementById('contact-form').onsubmit = sendToWhatsApp;
+
+        // Mobile Menu Logic
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuIcon = menuBtn ? menuBtn.querySelector('span') : null;
+            let isMenuOpen = false;
+
+            if (menuBtn && mobileMenu) {
+                gsap.set(mobileMenu, { yPercent: -100, display: "none" });
+
+                const toggleMenu = () => {
+                    isMenuOpen = !isMenuOpen;
+                    if (isMenuOpen) {
+                        mobileMenu.style.display = "block";
+                        gsap.to(mobileMenu, { yPercent: 0, duration: 0.6, ease: "power3.out" });
+                        gsap.fromTo(".mobile-link", { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.4, stagger: 0.08, delay: 0.2 });
+                        if (menuIcon) menuIcon.textContent = "close";
+                        document.body.style.overflow = "hidden";
+                    } else {
+                        gsap.to(mobileMenu, { yPercent: -100, duration: 0.5, ease: "power3.in", onComplete: () => { mobileMenu.style.display = "none"; } });
+                        if (menuIcon) menuIcon.textContent = "menu";
+                        document.body.style.overflow = "";
+                    }
+                };
+                menuBtn.onclick = toggleMenu;
+                const mobileLinks = mobileMenu.querySelectorAll('a');
+                mobileLinks.forEach(link => { link.onclick = () => { if (isMenuOpen) toggleMenu(); }; });
+            }
+        });
+    </script>
+</body>
+
+</html>

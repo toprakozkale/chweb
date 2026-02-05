@@ -1,0 +1,15 @@
+/* 
+   Tailwind CSS kullanıldığı için bu dosya şu an boş bırakılabilir 
+   veya özel CSS animasyonları için kullanılabilir. 
+*/
+
+/* Smooth Scroll HTML Fix */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom Selection Color */
+::selection {
+    background: #e21836;
+    color: white;
+}
